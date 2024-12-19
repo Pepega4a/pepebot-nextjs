@@ -1,10 +1,10 @@
 import { DiscordBot, Guild, BotCommand } from '@/types/discord';
 
-const API_URL = process.env.NEXT_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const api = {
   async getBotInfo(): Promise<DiscordBot> {
-    console.log('API URL:', process.env.NEXT_API_URL);
+    console.log('API URL:', process.env.NEXT_PUBLIC_API_URL);
     const response = await fetch(`${API_URL}/api/bot`);
     if (!response.ok) {
       throw new Error('Failed to fetch bot info');
