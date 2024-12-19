@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1a1b1e;
+  --foreground: #ffffff;
+}
+
+body {
+  @apply bg-background text-foreground;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+@layer components {
+  .container-wrapper {
+    @apply max-w-7xl mx-auto px-4;
+    @media (max-width: 640px) {
+      @apply px-3;
+    }
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold rounded;
+    @media (max-width: 640px) {
+      @apply py-3 px-5 text-sm;
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+} 
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img::before {
+  content: " ";
+  display: block;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-lg font-medium;
+  @apply hover:bg-blue-700 transition-all duration-300;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  
+  @media (max-width: 640px) {
+    @apply px-4 py-2;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    line-height: 1.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

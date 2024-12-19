@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Резервируем место под скроллбар */
+html {
+  margin-right: calc(100vw - 100%);
+  margin-left: 0;
+}
+
+/* Скрываем скроллбар для Chrome, Safari и Opera */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4b4e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c5e62;
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4b4e transparent;
+}
+
+/* Предотвращаем прыжки при открытии модального окна */
+html {
+  scrollbar-gutter: stable;
+} 
