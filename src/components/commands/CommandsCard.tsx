@@ -89,7 +89,7 @@ export default function CommandsCard({ command, className = '' }: CommandsCardPr
                                     <div className='bg-[#2a2d2a] rounded-full p-3 inline-block'>
                                         <code className='text-white'>
                                             /{command.name} {
-                                                command.options?.map((option, index) => {
+                                                command.options?.map((option) => {
                                                     const formattedOption = formatOption(option);
                                                     return (
                                                         <span key={option.name}>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { XMarkIcon as XIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion'
 

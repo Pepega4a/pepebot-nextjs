@@ -5,11 +5,9 @@ import './globals.css';
 import { Providers } from './providers';
 
 export default function RootLayout({
-  children,
-  session,
+  children
 }: {
   children: React.ReactNode
-  session: any
 }) {
   return (
     <html lang="en" className="bg-[#1a1d1a]">

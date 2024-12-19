@@ -5,8 +5,7 @@ import useTranslation from '@/hooks/useTranslation';
 import { useState, useEffect } from 'react';
 import Loading from '@/components/ui/Loading';
 import { DiscordBot } from '@/types/discord';
-import Link from 'next/link';
-
+import Image from 'next/image';
 export default function Home() {
   const [botInfo, setBotInfo] = useState<DiscordBot | null>(null);
   const [loading, setLoading] = useState(true);
@@ -39,7 +38,7 @@ export default function Home() {
           <div className="py-12">
             <div className="flex items-center gap-6">
               <div className='relative'>
-                <img
+                <Image
                   src="/fallbacklogo.png"
                   alt={botInfo.username}
                   className="w-24 h-24 rounded-full border-4 border-[#2d332d] sm:flex hidden"
@@ -107,11 +106,11 @@ export default function Home() {
         <section className="text-center mb-12">
           <h2 className="text-xl font-bold text-[#43b581] mb-4">{t('testimonials.title')}</h2>
           <blockquote className="text-gray-300 mb-4">
-            <p>"Pepe Bot значительно упростил управление нашим сервером!"</p>
+            <p>Pepe Bot значительно упростил управление нашим сервером!</p>
             <footer>— Алексей, администратор Discord-сервера</footer>
           </blockquote>
           <blockquote className="text-gray-300">
-            <p>"Уникальные команды и развлечения, которые предлагает Pepe Bot, делают наш сервер более живым!"</p>
+            <p>Уникальные команды и развлечения, которые предлагает Pepe Bot, делают наш сервер более живым!</p>
             <footer>— Мария, участник сообщества</footer>
           </blockquote>
         </section>
