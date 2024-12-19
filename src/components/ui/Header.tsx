@@ -140,7 +140,7 @@ export const Header = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button
               onClick={() => {
-                setLocale('en' ? 'ru' : 'en');
+                setLocale(locale === 'en' ? 'ru' : 'en');
                 setIsMenuOpen(false);
               }}
               className="block w-full text-left px-3 py-2 rounded-md text-white hover:bg-gray-700"
